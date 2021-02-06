@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/C4ptainCrunch/ics.py/archive/v{{ version }}.tar.gz
-  sha256: 48c637e5eb8dfc817b1f3f6b3f662ba19cfcc25f8f71eb42f5d07e6f2c573994
+  url: https://github.com/ics-py/ics.py/archive/v{{ version }}.tar.gz
+  sha256: 4f24ca9843d8539565ca23600b7d17daa1a89fef3f5113ad2da01c7e1aebc6bd
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ test:
     - ics
 
 about:
-  home: https://github.com/C4ptainCrunch/ics.py/
+  home: https://github.com/ics-py/ics-py/
   license: Apache-2.0
   license_file: LICENSE.rst
   summary: "Pythonic iCalendar (RFC 5545) Parser"
