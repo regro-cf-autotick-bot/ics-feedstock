@@ -1,7 +1,7 @@
 About ics
 =========
 
-Home: https://github.com/C4ptainCrunch/ics.py/
+Home: https://github.com/ics-py/ics-py/
 
 Package license: Apache-2.0
 
