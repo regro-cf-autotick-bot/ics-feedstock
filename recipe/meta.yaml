@@ -1,5 +1,5 @@
 {% set name = "ics" %}
-{% set version = "0.7" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/ics-py/ics.py/archive/v{{ version }}.tar.gz
-  sha256: 4f24ca9843d8539565ca23600b7d17daa1a89fef3f5113ad2da01c7e1aebc6bd
+  sha256: 7c62f81420908b23676be44f12a9c3e3cd37bcb1e4ac5b8f9a779c7a0a484f8f
 
 build:
   noarch: python
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/ics-py/ics-py/
   license: Apache-2.0
   license_file: LICENSE.rst
-  summary: "Pythonic iCalendar (RFC 5545) Parser"
+  summary: Pythonic iCalendar (RFC 5545) Parser
   doc_url: https://icspy.readthedocs.io/en/stable/
   dev_url: https://github.com/C4ptainCrunch/ics.py/
 
