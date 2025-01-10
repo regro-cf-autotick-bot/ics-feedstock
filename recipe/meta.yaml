@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - tatsu >4.2
     - arrow <0.18,>=0.11
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     # upstream 0.7 requires arrow <0.15,>=0.11
     # but it cannot be satisfied with python 3.9 in conda (because arrow is not noarch)
     # I tested ics with arrow 0.15.8, 0.16.0, 0.17.0
@@ -32,6 +32,8 @@ requirements:
     - tatsu >4.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ics
 
